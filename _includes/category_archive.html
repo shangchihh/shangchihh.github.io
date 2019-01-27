@@ -1,0 +1,14 @@
+{% capture tempcategories %}
+  {% for category in site.categories %}
+    {{ category[1].size | plus: 1000 }}#{{ category[0] }}#{{ category[1].size }}
+  {% endfor %}
+{% endcapture %}
+{% assign sortedtempcategories = tempcategories | split:' ' | sort | reverse %}
+<ul>
+{% for tempcategory in sortedtempcategories %}
+  {% assign categoryitems = tempcategory | split: '#' %}
+  {% capture categoryname %}{{ categoryitems[1] }}{% endcapture %}
+  {% capture categorycounts %}{{ categoryitems[2] }}{% endcapture %}
+  <li><a href="/category/{{ categoryname }}"><code class="highligher-rouge"><nobr>{{ categoryname }}</nobr></code></a> ({{ categorycounts }})</li>
+{% endfor %}
+</ul>

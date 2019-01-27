@@ -1,0 +1,6 @@
+#!/bin/sh
+
+python script/tag_generator.py
+python script/category_generator.py
+
+bundle exec jekyll serve --drafts

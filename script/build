@@ -1,0 +1,8 @@
+#!/bin/sh
+
+set -e
+
+python script/tag_generator.py
+
+echo "Building the example site..."
+bundle exec jekyll build

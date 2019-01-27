@@ -1,0 +1,49 @@
+title: Shang-Chih's Homepage
+author: Shang-Chih Raphael Huang
+email: shangchihh@gmail.com
+description: >
+  Writing is thinking.
+
+# social links
+social:
+  github: shangchihh
+  twitter: ShangChihHuang
+  stackoverflow: "9770081/shang-chih-raphael-huang"
+  rss: feed.xml
+
+# Mastodon instances
+# mastodon:
+# - username: jekyll
+#   instance: example.com
+# - username: jekyll2
+#   instance: example.com
+
+
+show_excerpts: true # set to true to show excerpts on the homepage
+
+permalink: /:year/:month/:day/:title.html
+
+# Minima date format
+# refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
+minima:
+  date_format: "%b %-d, %Y"
+
+# If you want to link only specific pages in your header, uncomment
+# this and add the path to the pages in order as they should show up
+header_pages:
+  - about.md
+  - categories.md
+  - tags.md
+  - search.md
+
+# Build settings
+# theme: minima
+
+plugins:
+ - jekyll-feed
+ - jekyll-seo-tag
+
+disqus:
+  shortname: "shangchih"
+
+google_analytics: "UA-126638571-1"

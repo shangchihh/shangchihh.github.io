@@ -1,0 +1,83 @@
+/**
+ * Syntax highlighting styles
+ * https://doc.rust-lang.org/book/highlight.css
+ */
+
+ $atelier-dune-comment: #AAA;
+ $atelier-dune-red: #d73737;
+ $atelier-dune-orange: #b65611;
+ $atelier-dune-green: #60ac39;
+ $atelier-dune-blue: #6684e1;
+ $atelier-dune-purple: #b854d4;
+
+
+.highlight {
+  display: block;
+  color: #6e6b5e;
+  background: #f1f1f1;
+  @extend %vertical-rhythm;
+
+  .highlighter-rouge & {
+    background: #f1f1f1;
+  }
+
+  .c     { color: $atelier-dune-comment; font-style: italic } // Comment
+  .err   { color: #a61717; background-color: #e3d2d2 } // Error
+  .k     { color: $atelier-dune-purple; font-weight: bold } // Keyword
+  .o     { font-weight: bold } // Operator
+  .cm    { color: $atelier-dune-comment; font-style: italic } // Comment.Multiline
+  .cp    { color: $atelier-dune-comment; font-weight: bold } // Comment.Preproc
+  .c1    { color: $atelier-dune-comment; font-style: italic } // Comment.Single
+  .cs    { color: $atelier-dune-comment; font-weight: bold; font-style: italic } // Comment.Special
+  .gd    { color: #000; background-color: #fdd } // Generic.Deleted
+  .gd .x { color: #000; background-color: #faa } // Generic.Deleted.Specific
+  .ge    { font-style: italic } // Generic.Emph
+  .gr    { color: #a00 } // Generic.Error
+  .gh    { color: #999 } // Generic.Heading
+  .gi    { color: #000; background-color: #dfd } // Generic.Inserted
+  .gi .x { color: #000; background-color: #afa } // Generic.Inserted.Specific
+  .go    { color: #888 } // Generic.Output
+  .gp    { color: #555 } // Generic.Prompt
+  .gs    { font-weight: bold } // Generic.Strong
+  .gu    { color: #aaa } // Generic.Subheading
+  .gt    { color: #a00 } // Generic.Traceback
+  .kc    { color: $atelier-dune-purple; font-weight: bold } // Keyword.Constant
+  .kd    { color: $atelier-dune-purple; font-weight: bold } // Keyword.Declaration
+  .kp    { color: $atelier-dune-purple; font-weight: bold } // Keyword.Pseudo
+  .kr    { color: $atelier-dune-purple; font-weight: bold } // Keyword.Reserved
+  .kt    { color: $atelier-dune-purple; font-weight: bold } // Keyword.Type
+  .m     { color: $atelier-dune-orange } // Literal.Number
+  .s     { color: $atelier-dune-green } // Literal.String
+  .na    { color: $atelier-dune-red } // Name.Attribute
+  .nb    { color: $atelier-dune-orange } // Name.Builtin
+  .nc    { color: $atelier-dune-red; font-weight: bold } // Name.Class
+  .no    { color: $atelier-dune-red } // Name.Constant
+  .ni    { color: $atelier-dune-red } // Name.Entity
+  .ne    { color: $atelier-dune-red; font-weight: bold } // Name.Exception
+  .nf    { color: $atelier-dune-red; font-weight: bold } // Name.Function
+  .nn    { color: $atelier-dune-red } // Name.Namespace
+  .nt    { color: $atelier-dune-purple } // Name.Tag
+  .nv    { color: $atelier-dune-red } // Name.Variable
+  .ow    { font-weight: bold } // Operator.Word
+  .w     { color: #bbb } // Text.Whitespace
+  .mf    { color: $atelier-dune-orange } // Literal.Number.Float
+  .mh    { color: $atelier-dune-orange } // Literal.Number.Hex
+  .mi    { color: $atelier-dune-orange } // Literal.Number.Integer
+  .mo    { color: $atelier-dune-orange } // Literal.Number.Oct
+  .sb    { color: $atelier-dune-green } // Literal.String.Backtick
+  .sc    { color: $atelier-dune-green } // Literal.String.Char
+  .sd    { color: $atelier-dune-green } // Literal.String.Doc
+  .s2    { color: $atelier-dune-green } // Literal.String.Double
+  .se    { color: $atelier-dune-green } // Literal.String.Escape
+  .sh    { color: $atelier-dune-green } // Literal.String.Heredoc
+  .si    { color: $atelier-dune-green } // Literal.String.Interpol
+  .sx    { color: $atelier-dune-green } // Literal.String.Other
+  .sr    { color: $atelier-dune-green } // Literal.String.Regex
+  .s1    { color: $atelier-dune-green } // Literal.String.Single
+  .ss    { color: $atelier-dune-green } // Literal.String.Symbol
+  .bp    { color: $atelier-dune-orange } // Name.Builtin.Pseudo
+  .vc    { color: $atelier-dune-red } // Name.Variable.Class
+  .vg    { color: $atelier-dune-red } // Name.Variable.Global
+  .vi    { color: $atelier-dune-red } // Name.Variable.Instance
+  .il    { color: $atelier-dune-orange } // Literal.Number.Integer.Long
+}

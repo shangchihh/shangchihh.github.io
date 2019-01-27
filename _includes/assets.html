@@ -1,0 +1,20 @@
+{% if page.assets %}
+    {% capture assetsPath %}{{ page.assets | slugify }}/{{ include.name }}{% endcapture %}
+{% else %}
+    {% capture assetsPath %}{{ page.title | slugify }}/{{ include.name }}{% endcapture %}
+{% endif %}
+
+{% if include.type == "image" %}
+{% if include.caption %}
+<figure>
+    <img src="/assets/posts/{{ assetsPath }}" {% if include.alt %} alt="{{ include.alt }}" {% endif %} {% if include.width %} width="{{ include.width }}" {% endif %}/>
+    <figcaption>{{ include.caption }}</figcaption>
+</figure>
+{% else %}
+<img src="/assets/posts/{{ assetsPath }}" {% if include.alt %} alt="{{ include.alt }}" {% endif %} {% if include.width %} width="{{ include.width }}" {% endif %}/>
+{% endif %}
+{% elsif include.type == "video" %}
+<video controls>
+    <source src="/assets/posts/{{ assetsPath }}" type="{{ include.videotype }}">
+</video>
+{% endif %}
