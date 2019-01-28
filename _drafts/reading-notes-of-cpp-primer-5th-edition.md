@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Reading Notes of C++ Primer, 5th Edition"
+assets: reading-notes-of-cpp-primer-5th-edition
 category: Reading
 tags: c++
 toc: true
@@ -8,11 +9,33 @@ toc: true
 
 Reading notes of [*C++ Primer*, 5th Edition](https://www.oreilly.com/library/view/c-primer-fifth/9780133053043/).
 
-## Chapter 1. Getting Started
+## Part I: The Basics
 
-### Section 1.1 Writing a Simple C++ Program 
-### Section 1.2 A First Look at Input/Output 
-### Section 1.3 A Word about Comments 
-### Section 1.4 Flow of Control
-### Section 1.5 Introducing Classes 
-### Section 1.6 The Bookstore Program
+### Chapter 2. Variables and Basic Types
+
+#### 2.1. Primitive Built-in Types
+
+The C++ standard has only state the minimum size of each built-in type:
+
+{% include assets.html type="image" name="minimum-size.png" %}
+
+#### 2.2. Variables
+
+There are four ways to initialize a variable:
+
+```c++
+int units_sold = 0;
+int units_sold = {0};
+int units_sold{0};
+int units_sold(0);
+```
+
+> The compiler will not let us list initialize (i.e. `{}`-initialization) variables of built-in type if the initializer might lead to the loss of information.
+
+```c++
+long double ld = 3.1415926536;
+int a{ld}, b = {ld}; // error: narrowing conversion required
+int c(ld), d = ld;   // ok: but value will be truncated
+```
+
+#### 2.4. `const` Qualifier
